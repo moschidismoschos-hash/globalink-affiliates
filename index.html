@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#020814">
   <title>GlobalLink</title>
+
   <style>
     * { box-sizing: border-box; }
+
     html, body {
       margin: 0;
       padding: 0;
@@ -14,36 +16,115 @@
       min-height: 100%;
       background: #020814;
     }
-    body {
-      overflow-x: hidden;
-    }
-    main {
+
+    body { overflow-x: hidden; }
+
+    .page {
+      position: relative;
       width: 100%;
       max-width: 1024px;
       margin: 0 auto;
       line-height: 0;
       background: #020814;
     }
-    img {
+
+    .page-image {
       display: block;
       width: 100%;
       height: auto;
       margin: 0;
       padding: 0;
     }
+
+    .hotspot {
+      position: absolute;
+      z-index: 20;
+      display: block;
+      background: transparent;
+      border: 0;
+      border-radius: 12px;
+      -webkit-tap-highlight-color: rgba(0, 132, 255, 0.22);
+    }
+
+    .hotspot:focus-visible {
+      outline: 3px solid #168cff;
+      outline-offset: 2px;
+    }
+
+    /* Αγορά */
+    .aliexpress { left: 2.3%; top: 66.1%; width: 21.1%; height: 5.7%; }
+    .public      { left: 2.3%; top: 72.2%; width: 21.1%; height: 5.7%; }
+    .digitickets-buy { left: 2.3%; top: 84.0%; width: 21.1%; height: 5.7%; }
+
+    /* Ταξίδια */
+    .iberia      { left: 26.3%; top: 66.1%; width: 21.1%; height: 5.7%; }
+    .ferryscanner{ left: 26.3%; top: 72.2%; width: 21.1%; height: 5.7%; }
+    .digitickets-travel { left: 26.3%; top: 84.0%; width: 21.1%; height: 5.7%; }
+
+    /* Κρύβει οπτικά το πλαίσιο ξενοδοχείου, το οποίο δεν χρησιμοποιείται. */
+    .hotel-cover {
+      position: absolute;
+      z-index: 15;
+      left: 26.3%;
+      top: 78.2%;
+      width: 21.1%;
+      height: 5.7%;
+      border: 1px solid rgba(16, 92, 164, 0.45);
+      border-radius: 12px;
+      background: linear-gradient(180deg, #031326 0%, #020d1c 100%);
+      box-shadow: inset 0 0 18px rgba(0, 72, 145, 0.10);
+    }
+
     @media (min-width: 1025px) {
       body {
         background: radial-gradient(circle at top, #08255a 0%, #020814 55%, #01040a 100%);
       }
-      main {
-        box-shadow: 0 0 60px rgba(0, 110, 255, 0.2);
+
+      .page {
+        box-shadow: 0 0 60px rgba(0, 110, 255, 0.20);
       }
     }
   </style>
 </head>
 <body>
-  <main>
-    <img src="globalink-home.png" alt="GlobalLink — Αγορά, Ταξίδια, Βιβλία και Παιχνίδια">
+  <main class="page">
+    <img
+      class="page-image"
+      src="globalink-home.png"
+      alt="GlobalLink — Αγορά, Ταξίδια, Βιβλία και Παιχνίδια"
+    >
+
+    <a class="hotspot aliexpress"
+       href="https://go.linkwi.se/z/11183-0/CD28424/?lnkurl=https%3A%2F%2Fwww.aliexpress.com%2F%3Faff_fcid%3Dfdf408e801bc473d9096af43d109a327-1785596420462-08909-j6RrMzM%26aff_fsk%3Dj6RrMzM%26aff_platform%3Daaf%26sk%3Dj6RrMzM%26aff_trace_key%3Dfdf408e801bc473d9096af43d109a327-1785596420462-08909-j6RrMzM%26terminal_id%3D5a3158914b624c63ae53a1583c8df889%26afSmartRedirect%3Dy"
+       target="_blank" rel="noopener sponsored"
+       aria-label="Άνοιγμα AliExpress μέσω του συνδέσμου συνεργασίας"></a>
+
+    <a class="hotspot public"
+       href="https://go.linkwi.se/z/469-0/CD28424/?lnkurl=https%3A%2F%2Fwww.public.gr%2F"
+       target="_blank" rel="noopener sponsored"
+       aria-label="Άνοιγμα Public μέσω του συνδέσμου συνεργασίας"></a>
+
+    <a class="hotspot iberia"
+       href="https://go.linkwi.se/z/14122-0/CD28424/?lnkurl=https%3A%2F%2Fwww.iberia.com%2Fgr%2F"
+       target="_blank" rel="noopener sponsored"
+       aria-label="Άνοιγμα Iberia μέσω του συνδέσμου συνεργασίας"></a>
+
+    <a class="hotspot ferryscanner"
+       href="https://go.linkwi.se/z/12865-0/CD28424/?lnkurl=https%3A%2F%2Fwww.ferryscanner.com%2Fel%2Fferry"
+       target="_blank" rel="noopener sponsored"
+       aria-label="Άνοιγμα Ferryscanner μέσω του συνδέσμου συνεργασίας"></a>
+
+    <a class="hotspot digitickets-buy"
+       href="https://go.linkwi.se/z/12248-0/CD28424/?lnkurl=https%3A%2F%2Fwww.digitickets.gr%2Fel"
+       target="_blank" rel="noopener sponsored"
+       aria-label="Άνοιγμα DigiTickets μέσω του συνδέσμου συνεργασίας"></a>
+
+    <a class="hotspot digitickets-travel"
+       href="https://go.linkwi.se/z/12248-0/CD28424/?lnkurl=https%3A%2F%2Fwww.digitickets.gr%2Fel"
+       target="_blank" rel="noopener sponsored"
+       aria-label="Άνοιγμα DigiTickets μέσω του συνδέσμου συνεργασίας"></a>
+
+    <div class="hotel-cover" aria-hidden="true"></div>
   </main>
 </body>
 </html>
