@@ -3,34 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#020816">
+  <meta name="theme-color" content="#020814">
   <title>GlobalLink</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html,
-    body {
+    * { box-sizing: border-box; }
+    html, body {
       margin: 0;
       padding: 0;
       width: 100%;
       min-height: 100%;
-      background: #020816;
+      background: #020814;
     }
-
     body {
       overflow-x: hidden;
     }
-
     main {
       width: 100%;
       max-width: 1024px;
       margin: 0 auto;
       line-height: 0;
-      background: #020816;
+      background: #020814;
     }
-
     img {
       display: block;
       width: 100%;
@@ -38,11 +31,19 @@
       margin: 0;
       padding: 0;
     }
+    @media (min-width: 1025px) {
+      body {
+        background: radial-gradient(circle at top, #08255a 0%, #020814 55%, #01040a 100%);
+      }
+      main {
+        box-shadow: 0 0 60px rgba(0, 110, 255, 0.2);
+      }
+    }
   </style>
 </head>
 <body>
   <main>
-    <img src="globalink-home.png" alt="GlobalLink">
+    <img src="globalink-home.png" alt="GlobalLink — Αγορά, Ταξίδια, Βιβλία και Παιχνίδια">
   </main>
 </body>
 </html>
